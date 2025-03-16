@@ -34,6 +34,22 @@ describe('Card Form', () => {
 
     await page.waitForSelector('.card-number-form-widget .input.valid');
   });
+
+  test('Form input should add .valid class if number is valid', async () => {
+    await page.goto('http://localhost:9000');
+
+    await page.waitForSelector('.card-number-form-widget');
+
+    const form = await page.$('.card-number-form-widget');
+    const input = await form.$('.input');
+    const submit = await form.$('.submit');
+
+    await input.type('37144');
+    await submit.click();
+
+    await page.waitForSelector('.card-number-form-widget .input.invalid');
+  });
+
   afterEach(async() => {
     await browser.close();
   });
