@@ -1,0 +1,43 @@
+.cards {
+  margin: 10px 0 10px 0;
+  overflow: hidden;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.cards li {
+  display: inline-flex;
+}
+
+.card {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  margin-right: 4px;
+  background-size: 100%, auto, contain;
+  background-repeat: no-repeat;
+}
+
+.card.cdisabled {
+  opacity: 0.3;
+}
+
+.card.mir {
+  background-image: url(../img/card-mir.png);
+}
+
+.card.visa {
+  background-image: url(../img/card-visa.png);
+}
+
+.card.master {
+  background-image: url(../img/card-mastercard.png);
+}
+
+.invalid {
+  background: red;
+}
