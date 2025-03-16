@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import { CardNumberFormWidget } from '../widget';
 
 test('widget', () => {
